@@ -1,0 +1,375 @@
+{
+  "preview": "preview.jpg",
+  "tags": ["Unspecified"],
+  "title": "Wallhaven Extended v2",
+  "type": "web",
+  "version": 2,
+  "visibility": "private",
+  "contentrating": "Questionable",
+  "description": "Random wallpapers from Wallhaven!\n\nFeatures:\n- Change wallpaper at set intervals\n- Double click desktop to change wallpaper\n- Display time and date\n- Display current wallpaper\n- Extensive search and filter options for wallpapers",
+  "file": "index.html",
+  "general": {
+    "properties": {
+      "wpe_baseFontSize": {
+        "index": 100,
+        "order": 100,
+        "text": "Base Font Size",
+        "type": "textinput",
+        "value": "16"
+      },
+      "wpe_baseFontSizeDescription": {
+        "index": 101,
+        "order": 101,
+        "text": "The base font size is used to calculate rem units throughout the wallpaper.<br/>Changing this value will scale the entire wallpaper UI<br/><br/>",
+        "type": "description"
+      },
+      "wpe_positionBottom": {
+        "index": 110,
+        "order": 110,
+        "text": "Position bottom",
+        "type": "textinput",
+        "value": "6"
+      },
+      "wpe_positionBottomDescription": {
+        "index": 111,
+        "order": 111,
+        "text": "The position from the bottom of the screen in percentage.<br/>Changing this value will move the displayed items up or down.<br/><br/>",
+        "type": "description"
+      },
+      "wpe_debugInfo": {
+        "index": 120,
+        "order": 120,
+        "text": "Display Debug Info",
+        "type": "bool",
+        "value": true
+      },
+      "wpe_debugInfoDescription": {
+        "index": 121,
+        "order": 121,
+        "text": "Displays useful debug information such as current wallpaper ID and API calls<br/><br/>",
+        "type": "description"
+      },
+      "wpe_displayTimeDate": {
+        "index": 130,
+        "order": 130,
+        "text": "Display the Clock and Calendar",
+        "type": "bool",
+        "value": true
+      },
+      "wpe_dateTimeFormat": {
+        "index": 140,
+        "order": 140,
+        "text": "Date and Time format",
+        "type": "combo",
+        "value": "iso",
+        "options": [
+          {
+            "label": "ISO (European)",
+            "value": "iso"
+          },
+          {
+            "label": "US",
+            "value": "us"
+          }
+        ]
+      },
+      "wpe_dateTimeFormatDescription": {
+        "index": 141,
+        "order": 141,
+        "text": "",
+        "type": "description"
+      },
+      "wpe_staticWallpaper": {
+        "index": 150,
+        "order": 150,
+        "type": "file",
+        "label": "Select static wallpaper",
+        "extensions": ["png", "jpg", "jpeg", "gif", "webp"],
+        "default": ""
+      },
+      "wpe_staticWallpaperDescription": {
+        "index": 151,
+        "order": 151,
+        "text": "Select a static wallpaper to use instead of the random one from Wallhaven<br/><br/>",
+        "type": "description"
+      },
+      "wpe_changeFrequencyMinutes": {
+        "index": 160,
+        "order": 160,
+        "text": "Change Wallpaper Frequency (Minutes)",
+        "type": "textinput",
+        "value": "30"
+      },
+      "wpe_changeFrequencyMinutesDescription": {
+        "index": 161,
+        "order": 161,
+        "text": "",
+        "type": "description"
+      },
+      "wpe_clicksToChange": {
+        "index": 170,
+        "order": 170,
+        "text": "Clicks to<br/>change wallpaper",
+        "type": "textinput",
+        "value": "2"
+      },
+      "wpe_clicksToChangeDescription": {
+        "index": 171,
+        "order": 171,
+        "text": "<br/>You can double click on the desktop to change the wallpaper manually.<br/>Set to 0 to disable this feature.<br/><br/>",
+        "type": "description"
+      },
+      "wh_search": {
+        "index": 180,
+        "order": 180,
+        "text": "Search",
+        "type": "textinput",
+        "value": ""
+      },
+      "wh_searchDescription": {
+        "index": 181,
+        "order": 181,
+        "text": "Freetext search for wallpapers, will automatically be matched against tags by splitting space character.<br/>Use @<username> to get all wallpapers from a specific user for example<br/><br/>",
+        "type": "description"
+      },
+      "wh_sortBy": {
+        "index": 190,
+        "order": 190,
+        "text": "Sort by",
+        "type": "combo",
+        "value": "date_added",
+        "options": [
+          {
+            "label": "None",
+            "value": "none"
+          },
+          {
+            "label": "Random",
+            "value": "random"
+          },
+          {
+            "label": "Date Added",
+            "value": "date_added"
+          },
+          {
+            "label": "Views",
+            "value": "views"
+          },
+          {
+            "label": "Favorites",
+            "value": "favorites"
+          },
+          {
+            "label": "Toplist",
+            "value": "toplist"
+          }
+        ]
+      },
+      "wh_sortByAge": {
+        "index": 200,
+        "order": 200,
+        "text": "Sort by Age (Toplist only)",
+        "type": "combo",
+        "value": "none",
+        "options": [
+          {
+            "label": "None",
+            "value": "none"
+          },
+          {
+            "label": "1 Day",
+            "value": "1d"
+          },
+          {
+            "label": "3 Days",
+            "value": "3d"
+          },
+          {
+            "label": "1 Week",
+            "value": "1w"
+          },
+          {
+            "label": "1 Month",
+            "value": "1m"
+          },
+          {
+            "label": "3 Months",
+            "value": "3m"
+          },
+          {
+            "label": "6 Months",
+            "value": "6m"
+          },
+          {
+            "label": "1 Year",
+            "value": "1y"
+          }
+        ]
+      },
+      "wpe_sortByAgeDescription": {
+        "index": 201,
+        "order": 201,
+        "text": "<br/><br/>",
+        "type": "description"
+      },
+      "wh_maxRandomPage": {
+        "index": 210,
+        "order": 210,
+        "text": "Max Random Page Number",
+        "type": "textinput",
+        "value": "20"
+      },
+      "wh_maxRandomPageDescription": {
+        "index": 211,
+        "order": 211,
+        "text": "A random page number will be selected between 1 and this value when fetching wallpapers.<br/>Setting a too high number will likely return 404's.<br/><br/>",
+        "type": "description"
+      },
+      "wh_wallhavenOptionsCategory": {
+        "index": 220,
+        "order": 220,
+        "text": "Categories<br/>",
+        "type": "description"
+      },
+      "wh_categoryGeneral": {
+        "index": 230,
+        "order": 230,
+        "text": "General",
+        "type": "bool",
+        "value": false
+      },
+      "wh_categoryPeople": {
+        "index": 240,
+        "order": 240,
+        "text": "People",
+        "type": "bool",
+        "value": false
+      },
+      "wh_categoryAnime": {
+        "index": 250,
+        "order": 250,
+        "text": "Anime",
+        "type": "bool",
+        "value": true
+      },
+      "wh_purity": {
+        "index": 260,
+        "order": 260,
+        "text": "Purity Rating",
+        "type": "description"
+      },
+      "wh_puritySfw": {
+        "index": 270,
+        "order": 270,
+        "text": "SFW",
+        "type": "bool",
+        "value": true
+      },
+      "wh_puritySketchy": {
+        "index": 280,
+        "order": 280,
+        "text": "Sketchy",
+        "type": "bool",
+        "value": false
+      },
+      "wh_purityNsfw": {
+        "index": 290,
+        "order": 290,
+        "text": "NSFW (Requires API Key)",
+        "type": "bool",
+        "value": false
+      },
+      "wh_purityNsfwApiKey": {
+        "index": 300,
+        "order": 300,
+        "text": "APIKEY (For NSFW access)",
+        "type": "textinput",
+        "value": ""
+      },
+      "wh_purityNsfwApiKeyDescription": {
+        "index": 310,
+        "order": 310,
+        "text": "",
+        "type": "description"
+      },
+      "wh_wallpaperPropertiesDescription": {
+        "index": 320,
+        "order": 320,
+        "text": "Wallpaper properties<br/>",
+        "type": "description"
+      },
+      "wh_wallpaperPropertySize": {
+        "index": 330,
+        "order": 330,
+        "text": "The smallest size, example: 1920x1080",
+        "type": "textinput",
+        "value": ""
+      },
+      "wh_wallpaperPropertyRatio": {
+        "index": 340,
+        "order": 340,
+        "text": "Screen ratio",
+        "type": "combo",
+        "value": "16x9",
+        "options": [
+          {
+            "label": "None",
+            "value": "none"
+          },
+          {
+            "label": "All Wide",
+            "value": "landscape"
+          },
+          {
+            "label": "16 × 9",
+            "value": "16x9"
+          },
+          {
+            "label": "16 × 10",
+            "value": "16x10"
+          },
+          {
+            "label": "21 × 9",
+            "value": "21x9"
+          },
+          {
+            "label": "32 × 9",
+            "value": "32x9"
+          },
+          {
+            "label": "48 × 9",
+            "value": "48x9"
+          },
+          {
+            "label": "All Portrait",
+            "value": "portrait"
+          },
+          {
+            "label": "9 × 16",
+            "value": "9x16"
+          },
+          {
+            "label": "10 × 16",
+            "value": "10x16"
+          },
+          {
+            "label": "9 × 18",
+            "value": "9x18"
+          },
+          {
+            "label": "1 × 1",
+            "value": "1x1"
+          },
+          {
+            "label": "3 × 2",
+            "value": "3x2"
+          },
+          {
+            "label": "4 × 3",
+            "value": "4x3"
+          }
+        ]
+      }
+    }
+  }
+}

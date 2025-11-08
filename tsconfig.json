@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "module": "es2020",
+    "target": "es2020",
+    "esModuleInterop": true,
+    "sourceMap": false,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "removeComments": false,
+    "moduleResolution": "bundler",
+    "declaration": false,
+    "forceConsistentCasingInFileNames": true,
+    "allowImportingTsExtensions": false,
+    "importsNotUsedAsValues": "remove"
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
+}

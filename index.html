@@ -1,0 +1,34 @@
+<!doctype html>
+<!--
+  This is the main HTML file for the Wallhaven Extended V2 project.
+  By: Erik Welander (erik.welander@hotmail.com)
+-->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Wallhaven Extended</title>
+    <link href="styles.css" rel="stylesheet" />
+    <link href="styles-custom.css" rel="stylesheet" />
+    <script type="module" src="dist/js/init.js"></script>
+  </head>
+  <body>
+    <div id="bottom-left">
+      <div id="debug" style="visibility: hidden">
+        <div id="debug-title"></div>
+        <div id="debug-status"></div>
+        <div id="debug-wallpaper-path-previous"></div>
+        <div id="debug-wallpaper-path"></div>
+      </div>
+    </div>
+    <div id="bottom-right">
+      <div id="bottom-right-flex">
+        <div>
+          <div id="clock-widget" style="visibility: hidden">
+            <div class="time"></div>
+          </div>
+          <div id="calendar-widget" style="visibility: hidden"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

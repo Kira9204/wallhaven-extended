@@ -1,0 +1,132 @@
+/**
+ * Styles for Wallhaven Extended V2
+ * These variables controls the look of elements and are programmatically changed by the app.
+ * By: Erik Welander (erik.welander@hotmail.com)
+ */
+:root {
+  --font: Gadugi;
+  --base-font-size: 16px;
+  --gray-bg: #696969;
+  --orange-selected: #9d5100;
+  --border-radius-normal: 2rem;
+  --padding-normal: 0.5rem;
+  --padding-large: 1rem;
+  --padding-xx-large: 3rem;
+  --color-debug-info: green;
+  --bottom-position: 6%;
+}
+
+html,
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 100% !important;
+  width: 100% !important;
+  overflow: hidden !important;
+
+  font-family: var(--font);
+  font-size: var(--base-font-size);
+  font-weight: bold;
+
+  color: white;
+  background-color: black;
+
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#bottom-left {
+  position: absolute;
+  bottom: var(--bottom-position);
+  left: 1%;
+}
+
+#debug {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+
+  font-weight: bold;
+  color: var(--color-debug-info);
+  font-size: 2rem;
+}
+
+#debug > div {
+  background-color: black;
+  border: 1px solid black;
+  border-radius: var(--border-radius-normal);
+  padding: var(--padding-normal);
+  display: inline-block;
+  width: max-content;
+}
+
+#bottom-right {
+  position: absolute;
+  bottom: var(--bottom-position);
+  right: 1%;
+}
+
+#bottom-right-flex {
+  display: flex;
+  align-items: flex-end;
+}
+
+#clock-widget {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .time {
+    font-size: 8rem;
+    font-weight: bold;
+    border-radius: var(--border-radius-normal);
+    padding-left: var(--padding-xx-large);
+    padding-right: var(--padding-xx-large);
+    padding-bottom: var(--padding-large);
+    margin-bottom: 2rem;
+    background-color: var(--orange-selected);
+  }
+}
+
+#calendar-widget {
+  font-size: 1.9rem;
+  font-weight: normal;
+  display: inline-flex;
+  gap: 3rem;
+
+  .calendar {
+    background: var(--gray-bg);
+    border-radius: var(--border-radius-normal);
+    padding: var(--padding-normal);
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th,
+    td {
+      text-align: center;
+      padding: 0.8rem;
+      height: 0.8rem;
+      width: 0.8rem;
+    }
+    h3 {
+      text-align: center;
+      margin: 1rem 0;
+    }
+
+    .week {
+      padding-right: 1rem;
+      font-weight: bold;
+    }
+
+    .today {
+      font-weight: bold;
+      background-color: var(--orange-selected);
+      border-radius: var(--border-radius-normal);
+    }
+  }
+}
